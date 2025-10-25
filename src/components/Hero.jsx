@@ -14,9 +14,36 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative flex flex-col items-center justify-center text-center px-6 py-24 max-w-4xl mx-auto overflow-hidden bg-[#0B0F19]"
+      className="relative flex flex-col items-center justify-center text-center px-6 min-h-[90vh] max-w-5xl mx-auto overflow-hidden bg-[#0B0F19]"
     >
-      
+      {/* --- Animated Abstract Background Shapes --- */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {/* Top Left Corner */}
+        <div className="absolute top-10 left-10 w-24 h-24 bg-orange-500/40 rounded-lg rotate-12 animate-float-slow" />
+        <div className="absolute top-32 left-24 w-10 h-10 bg-gray-500/30 rounded-full animate-float-fast" />
+
+        {/* Bottom Left */}
+        <div className="absolute bottom-16 left-8 w-16 h-16 bg-cyan-400/30 rounded-full animate-float-medium" />
+        <div className="absolute bottom-32 left-1/6 w-10 h-10 bg-orange-400/25 rounded-md rotate-45 animate-float-slow" />
+
+        {/* Top Right */}
+        <div className="absolute top-12 right-10 w-20 h-20 bg-cyan-400/30 rounded-full animate-float-medium" />
+        <div className="absolute top-1/4 right-1/8 w-8 h-8 bg-gray-400/30 rounded-md rotate-12 animate-float-fast" />
+
+        {/* Bottom Right */}
+        <div className="absolute bottom-10 right-12 w-14 h-14 bg-orange-500/35 rounded-md rotate-12 animate-float-slow" />
+        <div className="absolute bottom-1/5 right-1/4 w-10 h-10 bg-gray-500/25 rounded-full animate-float-medium" />
+
+        {/* Mid Edges */}
+        <div className="absolute top-1/3 left-2 w-6 h-6 bg-cyan-400/30 rounded-full animate-float-fast" />
+        <div className="absolute bottom-1/3 right-2 w-6 h-6 bg-orange-400/30 rounded-md animate-float-medium" />
+
+        {/* Tiny Dots */}
+        <div className="absolute top-8 right-1/3 w-2 h-2 bg-orange-400/40 rounded-full animate-float-slow" />
+        <div className="absolute bottom-12 left-1/3 w-2 h-2 bg-cyan-400/40 rounded-full animate-float-medium" />
+        <div className="absolute top-2/3 right-1/5 w-1.5 h-1.5 bg-gray-400/40 rounded-full animate-float-fast" />
+      </div>
+
       {/* --- Main Content --- */}
       <motion.div
         initial={{ opacity: 0, y: 40 }}
