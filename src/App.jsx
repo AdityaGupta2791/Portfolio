@@ -1,12 +1,11 @@
 import React from 'react'
+import Header from './components/Header.jsx'
 
-function App() {
+export default function App() {
 
   return (
-    <>
-      <h1 className="text-2xl">Portfolio - Aditya Gupta</h1>
-    </>
+    <div className="bg-[#0d1117] text-white font-[Inter]">
+      <Header />
+    </div>
   )
 }
-
-export default App
