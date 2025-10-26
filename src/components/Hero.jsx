@@ -73,7 +73,7 @@ const Hero = () => {
               key={s.name}
               whileHover={{ scale: 1.15 }}
               transition={{ duration: 0.15, ease: 'easeOut' }}
-              className="flex flex-col items-center gap-1 text-gray-400 hover:text-orange-400 transition-smooth"
+              className="flex flex-col items-center gap-1 text-gray-300 hover:text-orange-400 transition-smooth"
             >
               <div className="text-3xl">{s.icon}</div>
               <p className="text-sm">{s.name}</p>
