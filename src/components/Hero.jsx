@@ -14,7 +14,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative flex flex-col items-center justify-center text-center px-6 min-h-[90vh] max-w-5xl mx-auto overflow-hidden bg-[#0B0F19]"
+      className="relative flex flex-col items-center justify-center text-center px-6 min-h-[100vh] max-w-5xl mx-auto overflow-hidden bg-[#0B0F19]"
     >
       {/* --- Animated Abstract Background Shapes --- */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -73,7 +73,7 @@ const Hero = () => {
               key={s.name}
               whileHover={{ scale: 1.15 }}
               transition={{ duration: 0.15, ease: 'easeOut' }}
-              className="flex flex-col items-center gap-1 text-gray-400 hover:text-orange-400 transition-transform"
+              className="flex flex-col items-center gap-1 text-gray-400 hover:text-orange-400 transition-smooth"
             >
               <div className="text-3xl">{s.icon}</div>
               <p className="text-xs">{s.name}</p>
@@ -88,12 +88,20 @@ const Hero = () => {
           transition={{ delay: 0.3, duration: 0.6 }}
           className="flex gap-5 justify-center"
         >
-          <button className="bg-orange-500 px-6 py-2 rounded-lg font-medium shadow-md hover:shadow-orange-500/40 hover:bg-orange-600 transition">
+          <a
+            href="#contact"
+            className="inline-block bg-orange-500 px-6 py-2 rounded-lg font-medium shadow-md hover:shadow-orange-500/40 hover:bg-orange-600 transition"
+          >
             Let's Connect
-          </button>
-          <button className="border border-orange-500 px-6 py-2 rounded-lg font-medium shadow-md hover:bg-orange-500 hover:text-white hover:shadow-orange-500/40 transition">
+          </a>
+          <a
+            href="https://drive.google.com/file/d/1WNm5fkwWnNr9DUrtXQdFh2m0_7qsK8NQ/view"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block border border-orange-500 px-6 py-2 rounded-lg font-medium shadow-md hover:bg-orange-500 hover:text-white hover:shadow-orange-500/40 transition"
+          >
             My Resume
-          </button>
+          </a>
         </motion.div>
       </motion.div>
     </section>
