@@ -51,16 +51,16 @@ const Hero = () => {
         transition={{ duration: 0.8 }}
         className="relative z-10"
       >
-        <p className="text-2xl tracking-wide">
+        <p className="text-3xl tracking-wide">
           Hello<span className="text-orange-500">.</span>
         </p>
 
         <h1 className="text-5xl font-extrabold mt-2 pb-2 bg-gradient-to-r from-orange-400 to-yellow-300 bg-clip-text text-transparent">
-          I’m Aditya
+          I’m Aditya Gupta
         </h1>
 
         {/* Impactful Line */}
-        <p className="text-gray-400 mt-4 max-w-2xl mx-auto text-lg leading-relaxed">
+        <p className="text-gray-300 mt-4 max-w-2xl mx-auto text-lg leading-relaxed">
           A <span className="text-orange-400 font-semibold">Full-Stack Developer </span>
           passionate about building elegant, efficient, and engaging web experiences 
           that blend creativity with powerful <span className="text-cyan-400 font-semibold">MERN</span> technologies.
@@ -76,7 +76,7 @@ const Hero = () => {
               className="flex flex-col items-center gap-1 text-gray-400 hover:text-orange-400 transition-smooth"
             >
               <div className="text-3xl">{s.icon}</div>
-              <p className="text-xs">{s.name}</p>
+              <p className="text-sm">{s.name}</p>
             </motion.div>
           ))}
         </div>
@@ -90,7 +90,7 @@ const Hero = () => {
         >
           <a
             href="#contact"
-            className="inline-block bg-orange-500 px-6 py-2 rounded-lg font-medium shadow-md hover:shadow-orange-500/40 hover:bg-orange-600 transition"
+            className="inline-block bg-orange-500 px-6 py-2 rounded-lg font-medium text-lg shadow-md hover:shadow-orange-500/40 hover:bg-orange-600 transition"
           >
             Let's Connect
           </a>
@@ -98,7 +98,7 @@ const Hero = () => {
             href="https://drive.google.com/file/d/1WNm5fkwWnNr9DUrtXQdFh2m0_7qsK8NQ/view"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block border border-orange-500 px-6 py-2 rounded-lg font-medium shadow-md hover:bg-orange-500 hover:text-white hover:shadow-orange-500/40 transition"
+            className="inline-block border border-orange-500 px-6 py-2 rounded-lg font-medium text-lg shadow-md hover:bg-orange-500 hover:text-white hover:shadow-orange-500/40 transition"
           >
             My Resume
           </a>
