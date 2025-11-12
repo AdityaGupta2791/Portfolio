@@ -15,7 +15,7 @@ const Navbar = () => {
   }, [darkMode]);
 
   return (
-    <nav className="fixed bottom-6 left-1/2 -translate-x-1/2 bg-[#0D1117]/90 dark:bg-[#0D1117]/90 backdrop-blur-md border-2 border-gray-700 text-white rounded-full px-8 py-3 flex items-center justify-between gap-20 shadow-lg z-50 transition-all duration-500 hover:translate-y-[-5px] hover:shadow-[0_0_15px_#fb923c70]">
+    <nav className="fixed top-5 left-1/2 -translate-x-1/2 bg-[#0D1117]/90 dark:bg-[#0D1117]/90 backdrop-blur-md border-2 border-gray-700 text-white rounded-full px-8 py-3 flex items-center justify-between gap-20 shadow-lg z-50 transition-all duration-500 hover:shadow-[0_0_15px_#fb923c70]">
       {/* Left side - Nav items */}
       <div className="flex items-center gap-10">
         {navItems.map((item) => (
@@ -53,4 +53,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar

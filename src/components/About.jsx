@@ -15,7 +15,7 @@ const About = () => {
       desc: "I focus on writing modular, maintainable, and high-performance code that scales effortlessly.",
     },
     {
-      icon: <Lightbulb className="text-cyan-400" size={26} />,
+      icon: <Lightbulb className="text-orange-400" size={26} />,
       title: "Creative Problem Solving",
       desc: "I enjoy translating ideas into elegant technical solutions through critical thinking and experimentation.",
     },
@@ -29,7 +29,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="relative px-6 py-24 max-w-6xl mx-auto text-center min-h-[100vh]"
+      className="relative px-6 py-28 max-w-6xl mx-auto text-center min-h-[100vh]"
     >
       {/* --- Title --- */}
       <motion.h2
@@ -76,7 +76,7 @@ const About = () => {
             variants={cardVariants}
             whileHover={{ scale: 1.03 }}
             transition={{ type: "spring", stiffness: 200, damping: 12 }}
-            className="bg-[#0D1117]/70 backdrop-blur-md border border-gray-800 rounded-xl p-6 shadow-lg hover:shadow-[0_0_15px_rgba(251,146,60,0.4)] hover:border-orange-400 transition-smooth"
+            className="bg-[#0D1117]/70 backdrop-blur-md border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-[0_0_15px_rgba(251,146,60,0.4)] hover:border-orange-400 transition-smooth"
           >
             <div className="flex items-center justify-center gap-3 mb-4">
               {item.icon}
@@ -90,4 +90,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default About

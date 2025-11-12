@@ -18,9 +18,9 @@ const SkillCard = ({ title, skills }) => (
     }}
     whileHover={{ scale: 1.03 }}
     transition={{ type: "spring", stiffness: 200, damping: 10 }}
-    className="bg-[#0D1117]/70 backdrop-blur-md border border-gray-800 rounded-xl p-6 shadow-lg hover:shadow-[0_0_15px_rgba(251,146,60,0.4)] hover:border-orange-400 transition-smooth"
+    className="bg-[#0D1117]/70 backdrop-blur-md border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-[0_0_15px_rgba(251,146,60,0.4)] hover:border-orange-400 transition-smooth"
   >
-    <h3 className="text-xl font-semibold text-white mb-4 text-center">{title}</h3>
+    <h3 className="text-xl font-semibold text-gray-200 mb-4 text-center">{title}</h3>
     <div className="grid grid-cols-2 gap-4">
       {skills.map((skill) => (
         <div
@@ -70,7 +70,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="min-h-[100vh] px-6 py-20 max-w-6xl mx-auto text-center">
+    <section id="skills" className="min-h-[100vh] px-6 py-28 max-w-6xl mx-auto text-center">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -101,4 +101,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default Skills
