@@ -2,11 +2,11 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { personal } from "../data/personal";
 import { socials } from "../data/socials";
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-};
+import { cardVariants, staggerContainer } from "../animations/variants";
+import Section from "./ui/Section";
+import SectionHeader from "./ui/SectionHeader";
+import Card from "./ui/Card";
+import Button from "./ui/Button";
 
 const Contact = () => {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -34,7 +34,6 @@ const Contact = () => {
       return;
     }
 
-    // trigger email
     const subject = encodeURIComponent(`Portfolio contact from ${form.name}`);
     const body = encodeURIComponent(
       `Name: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`
@@ -42,54 +41,34 @@ const Contact = () => {
     const mailto = `mailto:${personal.email}?subject=${subject}&body=${body}`;
     window.location.href = mailto;
 
-    // reset
     setForm({ name: "", email: "", message: "" });
   };
 
   return (
-    <section
-      id="contact"
-      className="relative px-6 py-28 max-w-6xl mx-auto min-h-[100vh]"
-    >
-      <motion.h2
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="text-4xl font-bold text-orange-400 mb-3 text-center"
-      >
-        Contact
-        <p className="text-gray-300 text-lg mb-14">
-          Feel free to reach out if you’d like to collaborate, discuss ideas, or just say hi!
-        </p>
-      </motion.h2>
+    <Section id="contact">
+      <SectionHeader
+        title="Contact"
+        subtitle="Feel free to reach out if you’d like to collaborate, discuss ideas, or just say hi!"
+        className="text-center mb-12"
+      />
 
-      {/* --- Grid Layout --- */}
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        variants={{
-          hidden: { opacity: 0 },
-          visible: {
-            opacity: 1,
-            transition: { staggerChildren: 0.2, delayChildren: 0.05 },
-          },
-        }}
+        variants={staggerContainer(0.2, 0.05)}
         className="grid md:grid-cols-2 gap-10"
       >
-        {/* --- Left: Contact Cards --- */}
         <div className="grid sm:grid-cols-2 md:grid-cols-1 gap-6">
-          {socials.map((item, idx) => (
-            <motion.a
-              key={idx}
+          {socials.map((item) => (
+            <Card
+              as="a"
+              key={item.title}
               href={item.link}
               target="_blank"
               rel="noopener noreferrer"
+              className="p-6 block text-center"
               variants={cardVariants}
-              whileHover={{ scale: 1.03 }}
-              transition={{ type: "spring", stiffness: 200, damping: 12 }}
-              className="bg-[#0D1117]/70 backdrop-blur-md border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-[0_0_15px_rgba(251,146,60,0.4)] hover:border-orange-400 block text-center"
             >
               <div className="flex items-center justify-center gap-2 mb-3">
                 {item.icon}
@@ -98,17 +77,16 @@ const Contact = () => {
                 </h3>
               </div>
               <p className="text-gray-300 leading-relaxed">{item.desc}</p>
-            </motion.a>
+            </Card>
           ))}
         </div>
 
-        {/* --- Right: Contact Form --- */}
-        <motion.form
+        <Card
+          as="form"
           onSubmit={handleSubmit}
+          className="p-8 flex flex-col gap-5"
           variants={cardVariants}
           whileHover={{ scale: 1.01 }}
-          transition={{ type: "spring", stiffness: 200, damping: 12 }}
-          className="bg-[#0D1117]/70 backdrop-blur-md border border-gray-700 rounded-xl p-8 shadow-lg hover:shadow-[0_0_15px_rgba(251,146,60,0.4)] hover:border-orange-400 flex flex-col gap-5"
         >
           <input
             name="name"
@@ -134,16 +112,19 @@ const Contact = () => {
             className="bg-transparent border border-gray-700 rounded-md px-4 py-3 text-gray-300 focus:outline-none focus:border-orange-400 transition-all resize-none"
           />
           {error && <p className="text-sm text-gray-300">{error}</p>}
-          <button
+          <Button
+            as="button"
             type="submit"
-            className="bg-orange-500 py-3 rounded-md font-semibold text-black text-lg font-semibold bg-gradient-to-r from-orange-500 to-amber-400 shadow-[0_0_20px_rgba(255,140,0,0.25)] hover:shadow-[0_0_30px_rgba(255,140,0,0.45)] hover:scale-[1.03] active:scale-[0.98] transition-all duration-300"
+            variant="primary"
+            size="lg"
+            className="w-full"
           >
             Send Message
-          </button>
-        </motion.form>
+          </Button>
+        </Card>
       </motion.div>
-    </section>
+    </Section>
   );
 };
 
-export default Contact
+export default Contact;

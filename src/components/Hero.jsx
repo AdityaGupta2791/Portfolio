@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { personal } from '../data/personal'
 import { heroHighlights } from '../data/skills'
+import Button from './ui/Button'
 
 const Hero = () => {
   return (
@@ -70,21 +71,19 @@ const Hero = () => {
         transition={{ delay: 0.3, duration: 0.6 }}
         className="flex gap-5 justify-center mt-4"
       >
-        <a
-          href="#contact"
-          className="inline-block px-7 py-3 text-black text-lg font-semibold rounded-xl bg-gradient-to-r from-orange-500 to-amber-400 shadow-[0_0_20px_rgba(255,140,0,0.25)] hover:shadow-[0_0_30px_rgba(255,140,0,0.45)] hover:scale-[1.03] active:scale-[0.98] transition-all duration-300"
-        >
+        <Button href="#contact" variant="primary" size="lg">
           Let’s Connect
-        </a>
+        </Button>
 
-        <a
+        <Button
           href={personal.resumeUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block px-7 py-3 text-lg font-semibold rounded-xl border-2 border-orange-500/60 backdrop-blur-sm hover:border-orange-400 hover:scale-[1.03] active:scale-[0.98] duration-300"
+          variant="outline"
+          size="lg"
         >
           My Resume
-        </a>
+        </Button>
       </motion.div>
 
       </motion.div>

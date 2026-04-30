@@ -1,29 +1,15 @@
 import { motion } from "framer-motion";
 import { strengths } from "../data/strengths";
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-};
+import { cardVariants, staggerContainer } from "../animations/variants";
+import Section from "./ui/Section";
+import SectionHeader from "./ui/SectionHeader";
+import Card from "./ui/Card";
 
 const About = () => {
   return (
-    <section
-      id="about"
-      className="relative px-6 py-28 max-w-6xl mx-auto text-center min-h-[100vh]"
-    >
-      {/* --- Title --- */}
-      <motion.h2
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-        className="text-4xl font-bold text-orange-400 mb-3"
-      >
-        About Me
-      </motion.h2>
+    <Section id="about" className="text-center">
+      <SectionHeader title="About Me" className="mb-3" />
 
-      {/* --- Journey Paragraph --- */}
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -37,38 +23,25 @@ const About = () => {
         an impact.
       </motion.p>
 
-      {/* --- Strengths Grid --- */}
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        variants={{
-          hidden: { opacity: 0 },
-          visible: {
-            opacity: 1,
-            transition: { staggerChildren: 0.2, delayChildren: 0.05 },
-          },
-        }}
+        variants={staggerContainer(0.2, 0.05)}
         className="grid sm:grid-cols-2 md:grid-cols-3 gap-10"
       >
-        {strengths.map((item, idx) => (
-          <motion.div
-            key={idx}
-            variants={cardVariants}
-            whileHover={{ scale: 1.03 }}
-            transition={{ type: "spring", stiffness: 200, damping: 12 }}
-            className="bg-[#0D1117]/70 backdrop-blur-md border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-[0_0_15px_rgba(251,146,60,0.4)] hover:border-orange-400"
-          >
+        {strengths.map((item) => (
+          <Card key={item.title} className="p-6" variants={cardVariants}>
             <div className="flex items-center justify-center gap-3 mb-4">
               {item.icon}
               <h3 className="text-xl font-semibold text-gray-200">{item.title}</h3>
             </div>
             <p className="text-gray-300 leading-relaxed">{item.desc}</p>
-          </motion.div>
+          </Card>
         ))}
       </motion.div>
-    </section>
+    </Section>
   );
 };
 
-export default About
+export default About;
