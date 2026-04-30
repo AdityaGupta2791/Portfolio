@@ -36,17 +36,17 @@ const Hero = () => {
         transition={{ duration: 0.8 }}
         className="relative z-10"
       >
-        <p className="text-3xl tracking-wide text-gray-200">
+        <p className="text-3xl tracking-wide text-heading">
           {personal.greeting}<span className="text-accent-strong font-bold">.</span>
         </p>
 
 
-        <h1 className="text-5xl font-extrabold mt-2 pb-2 bg-gradient-to-r from-accent to-yellow-300 bg-clip-text text-transparent">
+        <h1 className="text-5xl font-extrabold mt-2 pb-2 bg-gradient-to-r from-accent to-yellow-300 light:to-accent-strong bg-clip-text text-transparent">
           I’m {personal.name}
         </h1>
 
         {/* Impactful Line */}
-        <p className="text-gray-300 mt-4 max-w-2xl mx-auto text-lg leading-relaxed">
+        <p className="text-body mt-4 max-w-2xl mx-auto text-lg leading-relaxed">
           A <span className="text-accent font-semibold">{personal.role} </span>
           passionate about building elegant, efficient, and engaging web experiences
           that blend creativity with powerful <span className="text-accent font-semibold">MERN</span> technologies.
@@ -59,7 +59,7 @@ const Hero = () => {
               key={s.name}
               whileHover={{ scale: 1.15 }}
               transition={{ duration: 0.15, ease: 'easeOut' }}
-              className="flex flex-col items-center gap-1 text-gray-300 hover:text-accent"
+              className="flex flex-col items-center gap-1 text-body hover:text-accent"
             >
               <div className="text-3xl" aria-hidden="true">{s.icon}</div>
               <p className="text-sm">{s.name}</p>

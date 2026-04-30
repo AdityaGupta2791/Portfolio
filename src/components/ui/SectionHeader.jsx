@@ -13,7 +13,7 @@ const SectionHeader = ({ title, subtitle, className = "mb-12" }) => (
   >
     <h2 className="text-4xl font-bold text-accent">{title}</h2>
     {subtitle && (
-      <p className="text-gray-300 text-lg mt-3">{subtitle}</p>
+      <p className="text-body text-lg mt-3">{subtitle}</p>
     )}
   </motion.div>
 );

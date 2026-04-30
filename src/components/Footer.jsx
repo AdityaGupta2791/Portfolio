@@ -7,7 +7,7 @@ const Footer = () => {
         aria-hidden="true"
         className="w-full h-[2px] mx-auto bg-gradient-to-r from-transparent via-accent to-transparent rounded-full shadow-glow-accent-soft animate-pulse"
       />
-      <p className="text-sm text-gray-300 py-6">
+      <p className="text-sm text-body py-6">
           © {new Date().getFullYear()} {personal.name}. All rights reserved.
         </p>
     </footer>

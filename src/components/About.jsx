@@ -15,7 +15,7 @@ const About = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.15, duration: 0.6 }}
         viewport={{ once: true }}
-        className="text-gray-300 leading-relaxed max-w-3xl mx-auto text-lg mb-14"
+        className="text-body leading-relaxed max-w-3xl mx-auto text-lg mb-14"
       >
         My journey into tech began with curiosity — what started as experimenting with simple
         websites soon turned into a love for full-stack development. I enjoy building
@@ -34,9 +34,9 @@ const About = () => {
           <Card key={item.title} className="p-6" variants={cardVariants}>
             <div className="flex items-center justify-center gap-3 mb-4">
               <span aria-hidden="true">{item.icon}</span>
-              <h3 className="text-xl font-semibold text-gray-200">{item.title}</h3>
+              <h3 className="text-xl font-semibold text-heading">{item.title}</h3>
             </div>
-            <p className="text-gray-300 leading-relaxed">{item.desc}</p>
+            <p className="text-body leading-relaxed">{item.desc}</p>
           </Card>
         ))}
       </motion.div>

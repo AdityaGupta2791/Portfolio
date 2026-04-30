@@ -7,15 +7,15 @@ import Card from "./ui/Card";
 
 const SkillCard = ({ title, skills }) => (
   <Card className="p-6" variants={cardVariants}>
-    <h3 className="text-xl font-semibold text-gray-200 mb-4 text-center">{title}</h3>
+    <h3 className="text-xl font-semibold text-heading mb-4 text-center">{title}</h3>
     <div className="grid grid-cols-2 gap-4">
       {skills.map((skill) => (
         <div
           key={skill.name}
-          className="flex items-center gap-3 px-3 py-2 rounded-lg bg-surface/60 hover:bg-surface-hover border border-gray-700 hover:border-accent"
+          className="flex items-center gap-3 px-3 py-2 rounded-lg bg-surface/60 hover:bg-surface-hover border border-border hover:border-accent"
         >
           <div className="text-2xl" aria-hidden="true">{skill.icon}</div>
-          <p className="text-gray-300 font-medium">{skill.name}</p>
+          <p className="text-body font-medium">{skill.name}</p>
         </div>
       ))}
     </div>

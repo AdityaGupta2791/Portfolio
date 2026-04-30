@@ -33,12 +33,12 @@ const Projects = () => {
             <img
               src={p.img}
               alt={p.title}
-              className="w-full h-60 md:h-64 object-cover border-b border-gray-700"
+              className="w-full h-60 md:h-64 object-cover border-b border-border"
             />
 
             <div className="px-6 py-2">
-              <h3 className="text-xl font-semibold text-gray-200">{p.title}</h3>
-              <p className="text-gray-300 leading-relaxed mt-1 mb-2">{p.desc}</p>
+              <h3 className="text-xl font-semibold text-heading">{p.title}</h3>
+              <p className="text-body leading-relaxed mt-1 mb-2">{p.desc}</p>
 
               <div className="flex flex-wrap gap-2 mb-2">
                 {p.tags.map((tag) => (

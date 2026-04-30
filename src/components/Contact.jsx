@@ -74,11 +74,11 @@ const Contact = () => {
               >
                 <div className="flex items-center justify-center gap-2 mb-3">
                   <span aria-hidden="true">{item.icon}</span>
-                  <h3 className="text-xl font-semibold text-gray-200">
+                  <h3 className="text-xl font-semibold text-heading">
                     {item.title}
                   </h3>
                 </div>
-                <p className="text-gray-300 leading-relaxed">{item.desc}</p>
+                <p className="text-body leading-relaxed">{item.desc}</p>
               </Card>
             );
           })}
@@ -100,7 +100,7 @@ const Contact = () => {
             value={form.name}
             onChange={onChange}
             placeholder="Your Name"
-            className="bg-transparent border border-gray-700 rounded-md px-4 py-3 text-gray-300 focus:outline-none focus:border-accent transition-all"
+            className="bg-transparent border border-border rounded-md px-4 py-3 text-body focus:outline-none focus:border-accent transition-all"
           />
 
           <label htmlFor="contact-email" className="sr-only">
@@ -113,7 +113,7 @@ const Contact = () => {
             onChange={onChange}
             placeholder="Your Email"
             type="email"
-            className="bg-transparent border border-gray-700 rounded-md px-4 py-3 text-gray-300 focus:outline-none focus:border-accent transition-all"
+            className="bg-transparent border border-border rounded-md px-4 py-3 text-body focus:outline-none focus:border-accent transition-all"
           />
 
           <label htmlFor="contact-message" className="sr-only">
@@ -126,10 +126,10 @@ const Contact = () => {
             onChange={onChange}
             placeholder="Your Message"
             rows="4"
-            className="bg-transparent border border-gray-700 rounded-md px-4 py-3 text-gray-300 focus:outline-none focus:border-accent transition-all resize-none"
+            className="bg-transparent border border-border rounded-md px-4 py-3 text-body focus:outline-none focus:border-accent transition-all resize-none"
           />
           {error && (
-            <p role="alert" className="text-sm text-gray-300">
+            <p role="alert" className="text-sm text-body">
               {error}
             </p>
           )}

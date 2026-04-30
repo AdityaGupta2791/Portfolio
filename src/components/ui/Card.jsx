@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 // Padding is intentionally NOT included — consumers pass it
 // explicitly (p-6, p-8, or none for image-edge cards).
 const baseClass =
-  "bg-base/70 backdrop-blur-md border border-gray-700 rounded-xl shadow-lg hover:shadow-glow-accent hover:border-accent";
+  "bg-base/70 backdrop-blur-md border border-border rounded-xl shadow-lg hover:shadow-glow-accent hover:border-accent";
 
 const Card = ({
   as = "div",

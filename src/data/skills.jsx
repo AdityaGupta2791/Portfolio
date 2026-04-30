@@ -37,7 +37,7 @@ export const skillCategories = [
     title: "Frontend",
     skills: [
       { name: "React.js", icon: <FaReact className="text-cyan-400" /> },
-      { name: "Next.js", icon: <SiNextdotjs className="text-white" /> },
+      { name: "Next.js", icon: <SiNextdotjs className="text-heading" /> },
       { name: "Vite", icon: <SiVite className="text-purple-400" /> },
       { name: "Axios", icon: <TbApiApp className="text-blue-400" /> },
       { name: "HTML5", icon: <FaHtml5 className="text-orange-500" /> },

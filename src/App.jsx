@@ -11,7 +11,7 @@ import Experience from "./components/Experience"
 export default function App() {
 
   return (
-    <div className="bg-[#0d1117] text-white font-[Inter]">
+    <div className="bg-base text-heading font-[Inter]">
       <Navbar />
       <Hero />
       <Divider />

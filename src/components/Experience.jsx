@@ -40,11 +40,11 @@ const Experience = () => {
 
               <div className="flex items-center gap-3 mb-3">
                 <Briefcase className="text-accent" aria-hidden="true" />
-                <h3 className="text-xl font-semibold text-gray-200">{exp.role}</h3>
+                <h3 className="text-xl font-semibold text-heading">{exp.role}</h3>
               </div>
-              <p className="text-lg text-gray-300 font-medium mb-2">{exp.company}</p>
-              <p className="text-sm text-gray-300 mb-3">{exp.period}</p>
-              <p className="text-gray-300 leading-relaxed mb-3">{exp.desc}</p>
+              <p className="text-lg text-body font-medium mb-2">{exp.company}</p>
+              <p className="text-sm text-body mb-3">{exp.period}</p>
+              <p className="text-body leading-relaxed mb-3">{exp.desc}</p>
 
               <div className="flex flex-wrap gap-2 mt-2">
                 {exp.skills.map((skill) => (
