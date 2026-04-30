@@ -1,4 +1,3 @@
-import React from 'react'
 import { FaReact, FaNodeJs } from 'react-icons/fa'
 import { SiMongodb, SiExpress } from 'react-icons/si'
 import { motion } from 'framer-motion'
@@ -63,7 +62,7 @@ const Hero = () => {
               key={s.name}
               whileHover={{ scale: 1.15 }}
               transition={{ duration: 0.15, ease: 'easeOut' }}
-              className="flex flex-col items-center gap-1 text-gray-300 hover:text-orange-400 transition-smooth"
+              className="flex flex-col items-center gap-1 text-gray-300 hover:text-orange-400"
             >
               <div className="text-3xl">{s.icon}</div>
               <p className="text-sm">{s.name}</p>
@@ -89,7 +88,7 @@ const Hero = () => {
           href="https://drive.google.com/file/d/1H6cVdQtXQk9wzm5QuFJm3C1asnmQk_Ci/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block px-7 py-3 text-lg font-semibold rounded-xl border-2 border-orange-500/60 backdrop-blur-sm hover:border-orange-400 hover:scale-[1.03] active:scale-[0.98] transition-smooth duration-300"
+          className="inline-block px-7 py-3 text-lg font-semibold rounded-xl border-2 border-orange-500/60 backdrop-blur-sm hover:border-orange-400 hover:scale-[1.03] active:scale-[0.98] duration-300"
         >
           My Resume
         </a>

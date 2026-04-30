@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 
@@ -109,7 +109,7 @@ const Contact = () => {
               variants={cardVariants}
               whileHover={{ scale: 1.03 }}
               transition={{ type: "spring", stiffness: 200, damping: 12 }}
-              className="bg-[#0D1117]/70 backdrop-blur-md border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-[0_0_15px_rgba(251,146,60,0.4)] hover:border-orange-400 transition-smooth block text-center"
+              className="bg-[#0D1117]/70 backdrop-blur-md border border-gray-700 rounded-xl p-6 shadow-lg hover:shadow-[0_0_15px_rgba(251,146,60,0.4)] hover:border-orange-400 block text-center"
             >
               <div className="flex items-center justify-center gap-2 mb-3">
                 {item.icon}
@@ -128,7 +128,7 @@ const Contact = () => {
           variants={cardVariants}
           whileHover={{ scale: 1.01 }}
           transition={{ type: "spring", stiffness: 200, damping: 12 }}
-          className="bg-[#0D1117]/70 backdrop-blur-md border border-gray-700 rounded-xl p-8 shadow-lg hover:shadow-[0_0_15px_rgba(251,146,60,0.4)] hover:border-orange-400 transition-smooth flex flex-col gap-5"
+          className="bg-[#0D1117]/70 backdrop-blur-md border border-gray-700 rounded-xl p-8 shadow-lg hover:shadow-[0_0_15px_rgba(251,146,60,0.4)] hover:border-orange-400 flex flex-col gap-5"
         >
           <input
             name="name"

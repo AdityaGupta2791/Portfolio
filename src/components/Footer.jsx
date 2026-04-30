@@ -1,6 +1,3 @@
-import React from "react";
-import { motion } from "framer-motion";
-
 const Footer = () => {
   return (
     <footer className="relative bg-[#0D1117]/80 backdrop-blur-md text-center">

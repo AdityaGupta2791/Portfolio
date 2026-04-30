@@ -1,9 +1,12 @@
-import React from 'react'
-import Hero from "./components/Hero.jsx"
-import Navbar from "./components/Navbar.jsx"
-import About from "./components/About.jsx"
-import Skills from "./components/Skills.jsx"
-import Divider from "./components/Divider.jsx"
+import Hero from "./components/Hero"
+import About from "./components/About"
+import Projects from "./components/Projects"
+import Contact from "./components/Contact"
+import Footer from "./components/Footer"
+import Navbar from "./components/Navbar"
+import Skills from "./components/Skills"
+import Divider from "./components/Divider"
+import Experience from "./components/Experience"
 
 export default function App() {
 
@@ -15,6 +18,13 @@ export default function App() {
       <About />
       <Divider />
       <Skills />
+      <Divider />
+      <Projects />
+      <Divider />
+      <Experience />
+      <Divider />
+      <Contact />
+      <Footer />
     </div>
   )
 }
