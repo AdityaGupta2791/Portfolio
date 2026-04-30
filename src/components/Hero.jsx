@@ -9,8 +9,11 @@ const Hero = () => {
       id="home"
       className="relative flex flex-col items-center justify-center text-center px-6 min-h-[100vh] max-w-5xl mx-auto overflow-hidden bg-base"
     >
-      {/* --- Animated Abstract Background Shapes --- */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      {/* --- Animated Abstract Background Shapes (decorative only) --- */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 overflow-hidden pointer-events-none"
+      >
         {/* Left Shapes */}
         <div className="absolute top-20 left-10 w-24 h-24 bg-accent-strong/40 rounded-lg rotate-12 animate-float-slow" />
         <div className="absolute top-1/4 left-80 w-6 h-6 bg-cyan-400/30 rounded-full animate-float-fast" />
@@ -58,7 +61,7 @@ const Hero = () => {
               transition={{ duration: 0.15, ease: 'easeOut' }}
               className="flex flex-col items-center gap-1 text-gray-300 hover:text-accent"
             >
-              <div className="text-3xl">{s.icon}</div>
+              <div className="text-3xl" aria-hidden="true">{s.icon}</div>
               <p className="text-sm">{s.name}</p>
             </motion.div>
           ))}

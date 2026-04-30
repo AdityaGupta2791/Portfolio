@@ -60,25 +60,28 @@ const Contact = () => {
         className="grid md:grid-cols-2 gap-10"
       >
         <div className="grid sm:grid-cols-2 md:grid-cols-1 gap-6">
-          {socials.map((item) => (
-            <Card
-              as="a"
-              key={item.title}
-              href={item.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="p-6 block text-center"
-              variants={cardVariants}
-            >
-              <div className="flex items-center justify-center gap-2 mb-3">
-                {item.icon}
-                <h3 className="text-xl font-semibold text-gray-200">
-                  {item.title}
-                </h3>
-              </div>
-              <p className="text-gray-300 leading-relaxed">{item.desc}</p>
-            </Card>
-          ))}
+          {socials.map((item) => {
+            const isExternal = !item.link.startsWith("mailto:");
+            return (
+              <Card
+                as="a"
+                key={item.title}
+                href={item.link}
+                target={isExternal ? "_blank" : undefined}
+                rel={isExternal ? "noopener noreferrer" : undefined}
+                className="p-6 block text-center"
+                variants={cardVariants}
+              >
+                <div className="flex items-center justify-center gap-2 mb-3">
+                  <span aria-hidden="true">{item.icon}</span>
+                  <h3 className="text-xl font-semibold text-gray-200">
+                    {item.title}
+                  </h3>
+                </div>
+                <p className="text-gray-300 leading-relaxed">{item.desc}</p>
+              </Card>
+            );
+          })}
         </div>
 
         <Card
@@ -88,14 +91,23 @@ const Contact = () => {
           variants={cardVariants}
           whileHover={{ scale: 1.01 }}
         >
+          <label htmlFor="contact-name" className="sr-only">
+            Your Name
+          </label>
           <input
+            id="contact-name"
             name="name"
             value={form.name}
             onChange={onChange}
             placeholder="Your Name"
             className="bg-transparent border border-gray-700 rounded-md px-4 py-3 text-gray-300 focus:outline-none focus:border-accent transition-all"
           />
+
+          <label htmlFor="contact-email" className="sr-only">
+            Your Email
+          </label>
           <input
+            id="contact-email"
             name="email"
             value={form.email}
             onChange={onChange}
@@ -103,7 +115,12 @@ const Contact = () => {
             type="email"
             className="bg-transparent border border-gray-700 rounded-md px-4 py-3 text-gray-300 focus:outline-none focus:border-accent transition-all"
           />
+
+          <label htmlFor="contact-message" className="sr-only">
+            Your Message
+          </label>
           <textarea
+            id="contact-message"
             name="message"
             value={form.message}
             onChange={onChange}
@@ -111,7 +128,11 @@ const Contact = () => {
             rows="4"
             className="bg-transparent border border-gray-700 rounded-md px-4 py-3 text-gray-300 focus:outline-none focus:border-accent transition-all resize-none"
           />
-          {error && <p className="text-sm text-gray-300">{error}</p>}
+          {error && (
+            <p role="alert" className="text-sm text-gray-300">
+              {error}
+            </p>
+          )}
           <Button
             as="button"
             type="submit"

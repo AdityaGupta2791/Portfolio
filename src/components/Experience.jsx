@@ -30,13 +30,16 @@ const Experience = () => {
               variants={cardVariants}
               whileHover={{ scale: 1.02 }}
             >
-              <div className="absolute -left-[2.15rem] top-7 flex flex-col items-center shadow-glow-accent">
+              <div
+                aria-hidden="true"
+                className="absolute -left-[2.15rem] top-7 flex flex-col items-center shadow-glow-accent"
+              >
                 <div className="absolute top-0 w-4 h-4 border-[2px] border-accent rounded-full bg-base"></div>
                 <div className="absolute top-5 w-[1.6px] -bottom-70 bg-gradient-to-b from-accent to-accent-soft/40"></div>
               </div>
 
               <div className="flex items-center gap-3 mb-3">
-                <Briefcase className="text-accent" />
+                <Briefcase className="text-accent" aria-hidden="true" />
                 <h3 className="text-xl font-semibold text-gray-200">{exp.role}</h3>
               </div>
               <p className="text-lg text-gray-300 font-medium mb-2">{exp.company}</p>

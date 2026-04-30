@@ -39,16 +39,19 @@ const Navbar = () => {
       </div>
 
       {/* Right side - Theme toggle */}
-      <div
+      <button
+        type="button"
         onClick={() => setDarkMode(!darkMode)}
+        aria-label={darkMode ? "Switch to light theme" : "Switch to dark theme"}
+        aria-pressed={darkMode}
         className="cursor-pointer w-10 h-10 flex items-center justify-center rounded-full border-2 border-gray-600 hover:border-accent transition-colors"
       >
         {darkMode ? (
-          <Sun className="text-accent" size={22} />
+          <Sun className="text-accent" size={22} aria-hidden="true" />
         ) : (
-          <Moon className="text-gray-300" size={22} />
+          <Moon className="text-gray-300" size={22} aria-hidden="true" />
         )}
-      </div>
+      </button>
     </nav>
   );
 };

@@ -14,7 +14,7 @@ const SkillCard = ({ title, skills }) => (
           key={skill.name}
           className="flex items-center gap-3 px-3 py-2 rounded-lg bg-surface/60 hover:bg-surface-hover border border-gray-700 hover:border-accent"
         >
-          <div className="text-2xl">{skill.icon}</div>
+          <div className="text-2xl" aria-hidden="true">{skill.icon}</div>
           <p className="text-gray-300 font-medium">{skill.name}</p>
         </div>
       ))}

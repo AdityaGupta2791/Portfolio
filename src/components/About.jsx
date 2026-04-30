@@ -33,7 +33,7 @@ const About = () => {
         {strengths.map((item) => (
           <Card key={item.title} className="p-6" variants={cardVariants}>
             <div className="flex items-center justify-center gap-3 mb-4">
-              {item.icon}
+              <span aria-hidden="true">{item.icon}</span>
               <h3 className="text-xl font-semibold text-gray-200">{item.title}</h3>
             </div>
             <p className="text-gray-300 leading-relaxed">{item.desc}</p>
