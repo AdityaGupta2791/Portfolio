@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Sun, Moon } from "lucide-react";
+import { navItems } from "../data/nav";
 
 const Navbar = () => {
-  const navItems = ["Home", "About", "Skills", "Projects", "Experience", "Contact"];
   const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {

@@ -1,15 +1,8 @@
-import { FaReact, FaNodeJs } from 'react-icons/fa'
-import { SiMongodb, SiExpress } from 'react-icons/si'
 import { motion } from 'framer-motion'
+import { personal } from '../data/personal'
+import { heroHighlights } from '../data/skills'
 
 const Hero = () => {
-  const skilledIn = [
-    { name: 'MongoDB', icon: <SiMongodb className="text-green-500" /> },
-    { name: 'Express', icon: <SiExpress className="text-gray-400" /> },
-    { name: 'React', icon: <FaReact className="text-cyan-400" /> },
-    { name: 'Node.js', icon: <FaNodeJs className="text-green-600" /> },
-  ]
-
   return (
     <section
       id="home"
@@ -40,24 +33,24 @@ const Hero = () => {
         className="relative z-10"
       >
         <p className="text-3xl tracking-wide text-gray-200">
-          Hello<span className="text-orange-500 font-bold">.</span>
+          {personal.greeting}<span className="text-orange-500 font-bold">.</span>
         </p>
 
 
         <h1 className="text-5xl font-extrabold mt-2 pb-2 bg-gradient-to-r from-orange-400 to-yellow-300 bg-clip-text text-transparent">
-          I’m Aditya Gupta
+          I’m {personal.name}
         </h1>
 
         {/* Impactful Line */}
         <p className="text-gray-300 mt-4 max-w-2xl mx-auto text-lg leading-relaxed">
-          A <span className="text-orange-400 font-semibold">Full-Stack Developer </span>
-          passionate about building elegant, efficient, and engaging web experiences 
+          A <span className="text-orange-400 font-semibold">{personal.role} </span>
+          passionate about building elegant, efficient, and engaging web experiences
           that blend creativity with powerful <span className="text-orange-400 font-semibold">MERN</span> technologies.
         </p>
 
         {/* SkilledIn Icons */}
         <div className="flex justify-center gap-10 mt-8 mb-8 flex-wrap">
-          {skilledIn.map((s) => (
+          {heroHighlights.map((s) => (
             <motion.div
               key={s.name}
               whileHover={{ scale: 1.15 }}
@@ -85,7 +78,7 @@ const Hero = () => {
         </a>
 
         <a
-          href="https://drive.google.com/file/d/1H6cVdQtXQk9wzm5QuFJm3C1asnmQk_Ci/view?usp=sharing"
+          href={personal.resumeUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block px-7 py-3 text-lg font-semibold rounded-xl border-2 border-orange-500/60 backdrop-blur-sm hover:border-orange-400 hover:scale-[1.03] active:scale-[0.98] duration-300"

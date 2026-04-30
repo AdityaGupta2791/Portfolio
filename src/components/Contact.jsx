@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
+import { personal } from "../data/personal";
+import { socials } from "../data/socials";
 
 const cardVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -38,33 +39,12 @@ const Contact = () => {
     const body = encodeURIComponent(
       `Name: ${form.name}\nEmail: ${form.email}\n\nMessage:\n${form.message}`
     );
-    const mailto = `mailto:adityagupta2791@gmail.com?subject=${subject}&body=${body}`;
+    const mailto = `mailto:${personal.email}?subject=${subject}&body=${body}`;
     window.location.href = mailto;
 
     // reset
     setForm({ name: "", email: "", message: "" });
   };
-
-  const contactInfo = [
-    {
-      icon: <FaEnvelope className="text-orange-400" size={26} />,
-      title: "Email",
-      desc: "adityagupta2791@gmail.com",
-      link: "mailto:adityagupta2791@gmail.com",
-    },
-    {
-      icon: <FaLinkedin className="text-orange-400" size={26} />,
-      title: "LinkedIn",
-      desc: "linkedin.com/in/adityagupta2791",
-      link: "https://linkedin.com/in/adityagupta2791",
-    },
-    {
-      icon: <FaGithub className="text-orange-400" size={26} />,
-      title: "GitHub",
-      desc: "github.com/adityagupta2791",
-      link: "https://github.com/adityagupta2791",
-    },
-  ];
 
   return (
     <section
@@ -100,7 +80,7 @@ const Contact = () => {
       >
         {/* --- Left: Contact Cards --- */}
         <div className="grid sm:grid-cols-2 md:grid-cols-1 gap-6">
-          {contactInfo.map((item, idx) => (
+          {socials.map((item, idx) => (
             <motion.a
               key={idx}
               href={item.link}

@@ -1,13 +1,5 @@
 import { motion } from "framer-motion";
-import {
-  FaReact, FaNodeJs, FaHtml5, FaCss3Alt, FaJs, FaGitAlt, FaGithub,
-  FaDocker, FaCloudUploadAlt, FaUserShield, FaLock
-} from "react-icons/fa";
-import {
-  SiMongodb, SiExpress, SiMysql, SiNextdotjs, SiPostman,
-  SiTailwindcss, SiVite, SiMongoose
-} from "react-icons/si";
-import { TbBrandVscode, TbApiApp } from "react-icons/tb";
+import { skillCategories } from "../data/skills";
 
 const SkillCard = ({ title, skills }) => (
   <motion.div
@@ -35,39 +27,6 @@ const SkillCard = ({ title, skills }) => (
 );
 
 const Skills = () => {
-  const frontend = [
-    { name: "React.js", icon: <FaReact className="text-cyan-400" /> },
-    { name: "Next.js", icon: <SiNextdotjs className="text-white" /> },
-    { name: "Vite", icon: <SiVite className="text-purple-400" /> },
-    { name: "Axios", icon: <TbApiApp className="text-blue-400" /> },
-    { name: "HTML5", icon: <FaHtml5 className="text-orange-500" /> },
-    { name: "CSS3", icon: <FaCss3Alt className="text-sky-400" /> },
-    { name: "Tailwind CSS", icon: <SiTailwindcss className="text-teal-400" /> },
-    { name: "JavaScript (ES6+)", icon: <FaJs className="text-yellow-400" /> },
-  ];
-
-  const backend = [
-    { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
-    { name: "Express.js", icon: <SiExpress className="text-gray-300" /> },
-    { name: "RESTful APIs", icon: <TbApiApp className="text-purple-400" /> },
-    { name: "Mongoose (ODM)", icon: <SiMongoose className="text-red-400" size={30} /> },
-    { name: "MongoDB", icon: <SiMongodb className="text-green-400" /> },
-    { name: "MySQL", icon: <SiMysql className="text-blue-400" /> },
-    { name: "JWT", icon: <FaUserShield className="text-red-400" /> },
-    { name: "bcrypt", icon: <FaLock className="text-yellow-400" /> },
-  ];
-
-  const others = [
-    { name: "Git", icon: <FaGitAlt className="text-orange-500" /> },
-    { name: "GitHub", icon: <FaGithub className="text-gray-300" /> },
-    { name: "Postman", icon: <SiPostman className="text-orange-400" /> },
-    { name: "Docker", icon: <FaDocker className="text-sky-400" /> },
-    { name: "VS Code", icon: <TbBrandVscode className="text-blue-500" /> },
-    { name: "Netlify", icon: <FaCloudUploadAlt className="text-green-400" /> },
-    { name: "MongoDB Compass", icon: <SiMongodb className="text-green-500" /> },
-    { name: "MySQL Workbench", icon: <SiMysql className="text-blue-500" /> },
-  ];
-
   return (
     <section id="skills" className="min-h-[100vh] px-6 py-28 max-w-6xl mx-auto text-center">
       <motion.h2
@@ -92,9 +51,9 @@ const Skills = () => {
         }}
         className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8"
       >
-        <SkillCard title="Frontend" skills={frontend} />
-        <SkillCard title="Backend" skills={backend} />
-        <SkillCard title="Others" skills={others} />
+        {skillCategories.map((cat) => (
+          <SkillCard key={cat.title} title={cat.title} skills={cat.skills} />
+        ))}
       </motion.div>
     </section>
   );
