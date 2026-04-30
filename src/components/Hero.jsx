@@ -7,23 +7,23 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative flex flex-col items-center justify-center text-center px-6 min-h-[100vh] max-w-5xl mx-auto overflow-hidden bg-[#0D1117]"
+      className="relative flex flex-col items-center justify-center text-center px-6 min-h-[100vh] max-w-5xl mx-auto overflow-hidden bg-base"
     >
       {/* --- Animated Abstract Background Shapes --- */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Left Shapes */}
-        <div className="absolute top-20 left-10 w-24 h-24 bg-orange-500/40 rounded-lg rotate-12 animate-float-slow" />
+        <div className="absolute top-20 left-10 w-24 h-24 bg-accent-strong/40 rounded-lg rotate-12 animate-float-slow" />
         <div className="absolute top-1/4 left-80 w-6 h-6 bg-cyan-400/30 rounded-full animate-float-fast" />
         <div className="absolute top-80 w-10 h-10 bg-gray-500/30 rounded-full animate-float-fast" />
-        <div className="absolute bottom-50 left-1/6 w-10 h-10 bg-orange-400/25 rounded-md rotate-45 animate-float-slow" />
+        <div className="absolute bottom-50 left-1/6 w-10 h-10 bg-accent/25 rounded-md rotate-45 animate-float-slow" />
         <div className="absolute bottom-16 left-8 w-16 h-16 bg-cyan-400/30 rounded-full animate-float-medium" />
 
         {/* Right Shapes */}
         <div className="absolute top-12 right-10 w-20 h-20 bg-cyan-400/30 rounded-full animate-float-medium" />
         <div className="absolute top-1/4 right-1/8 w-8 h-8 bg-gray-400/30 rounded-md rotate-12 animate-float-fast" />
-        <div className="absolute bottom-1/3 right-2 w-6 h-6 bg-orange-400/30 rounded-md animate-float-medium" />
+        <div className="absolute bottom-1/3 right-2 w-6 h-6 bg-accent/30 rounded-md animate-float-medium" />
         <div className="absolute bottom-1/5 right-1/4 w-10 h-10 bg-gray-500/25 rounded-full animate-float-medium" />
-        <div className="absolute bottom-10 right-12 w-14 h-14 bg-orange-500/35 rounded-md rotate-12 animate-float-slow" />
+        <div className="absolute bottom-10 right-12 w-14 h-14 bg-accent-strong/35 rounded-md rotate-12 animate-float-slow" />
       </div>
 
       {/* --- Main Content --- */}
@@ -34,19 +34,19 @@ const Hero = () => {
         className="relative z-10"
       >
         <p className="text-3xl tracking-wide text-gray-200">
-          {personal.greeting}<span className="text-orange-500 font-bold">.</span>
+          {personal.greeting}<span className="text-accent-strong font-bold">.</span>
         </p>
 
 
-        <h1 className="text-5xl font-extrabold mt-2 pb-2 bg-gradient-to-r from-orange-400 to-yellow-300 bg-clip-text text-transparent">
+        <h1 className="text-5xl font-extrabold mt-2 pb-2 bg-gradient-to-r from-accent to-yellow-300 bg-clip-text text-transparent">
           I’m {personal.name}
         </h1>
 
         {/* Impactful Line */}
         <p className="text-gray-300 mt-4 max-w-2xl mx-auto text-lg leading-relaxed">
-          A <span className="text-orange-400 font-semibold">{personal.role} </span>
+          A <span className="text-accent font-semibold">{personal.role} </span>
           passionate about building elegant, efficient, and engaging web experiences
-          that blend creativity with powerful <span className="text-orange-400 font-semibold">MERN</span> technologies.
+          that blend creativity with powerful <span className="text-accent font-semibold">MERN</span> technologies.
         </p>
 
         {/* SkilledIn Icons */}
@@ -56,7 +56,7 @@ const Hero = () => {
               key={s.name}
               whileHover={{ scale: 1.15 }}
               transition={{ duration: 0.15, ease: 'easeOut' }}
-              className="flex flex-col items-center gap-1 text-gray-300 hover:text-orange-400"
+              className="flex flex-col items-center gap-1 text-gray-300 hover:text-accent"
             >
               <div className="text-3xl">{s.icon}</div>
               <p className="text-sm">{s.name}</p>

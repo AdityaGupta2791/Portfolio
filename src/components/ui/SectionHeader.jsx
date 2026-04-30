@@ -11,7 +11,7 @@ const SectionHeader = ({ title, subtitle, className = "mb-12" }) => (
     transition={{ duration: 0.6 }}
     className={className}
   >
-    <h2 className="text-4xl font-bold text-orange-400">{title}</h2>
+    <h2 className="text-4xl font-bold text-accent">{title}</h2>
     {subtitle && (
       <p className="text-gray-300 text-lg mt-3">{subtitle}</p>
     )}

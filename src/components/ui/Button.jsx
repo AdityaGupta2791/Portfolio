@@ -3,9 +3,9 @@
 // (e.g. `motion.a`) — the latter enables Framer hover springs.
 const variants = {
   primary:
-    "text-black font-semibold bg-gradient-to-r from-orange-500 to-amber-400 shadow-[0_0_20px_rgba(255,140,0,0.25)] hover:shadow-[0_0_30px_rgba(255,140,0,0.45)] hover:scale-[1.03] active:scale-[0.98] transition-all duration-300",
+    "text-black font-semibold bg-gradient-to-r from-accent-strong to-accent-light shadow-glow-accent-bright hover:shadow-glow-accent-brightest hover:scale-[1.03] active:scale-[0.98] transition-all duration-300",
   outline:
-    "font-semibold border-2 border-orange-500/60 backdrop-blur-sm hover:border-orange-400 hover:scale-[1.03] active:scale-[0.98] transition-all duration-300",
+    "font-semibold border-2 border-accent-strong/60 backdrop-blur-sm hover:border-accent hover:scale-[1.03] active:scale-[0.98] transition-all duration-300",
 };
 
 const sizes = {

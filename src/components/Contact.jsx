@@ -93,7 +93,7 @@ const Contact = () => {
             value={form.name}
             onChange={onChange}
             placeholder="Your Name"
-            className="bg-transparent border border-gray-700 rounded-md px-4 py-3 text-gray-300 focus:outline-none focus:border-orange-400 transition-all"
+            className="bg-transparent border border-gray-700 rounded-md px-4 py-3 text-gray-300 focus:outline-none focus:border-accent transition-all"
           />
           <input
             name="email"
@@ -101,7 +101,7 @@ const Contact = () => {
             onChange={onChange}
             placeholder="Your Email"
             type="email"
-            className="bg-transparent border border-gray-700 rounded-md px-4 py-3 text-gray-300 focus:outline-none focus:border-orange-400 transition-all"
+            className="bg-transparent border border-gray-700 rounded-md px-4 py-3 text-gray-300 focus:outline-none focus:border-accent transition-all"
           />
           <textarea
             name="message"
@@ -109,7 +109,7 @@ const Contact = () => {
             onChange={onChange}
             placeholder="Your Message"
             rows="4"
-            className="bg-transparent border border-gray-700 rounded-md px-4 py-3 text-gray-300 focus:outline-none focus:border-orange-400 transition-all resize-none"
+            className="bg-transparent border border-gray-700 rounded-md px-4 py-3 text-gray-300 focus:outline-none focus:border-accent transition-all resize-none"
           />
           {error && <p className="text-sm text-gray-300">{error}</p>}
           <Button

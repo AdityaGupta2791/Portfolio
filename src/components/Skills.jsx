@@ -12,7 +12,7 @@ const SkillCard = ({ title, skills }) => (
       {skills.map((skill) => (
         <div
           key={skill.name}
-          className="flex items-center gap-3 px-3 py-2 rounded-lg bg-[#161b22]/60 hover:bg-[#1e242e] border border-gray-700 hover:border-orange-400"
+          className="flex items-center gap-3 px-3 py-2 rounded-lg bg-surface/60 hover:bg-surface-hover border border-gray-700 hover:border-accent"
         >
           <div className="text-2xl">{skill.icon}</div>
           <p className="text-gray-300 font-medium">{skill.name}</p>

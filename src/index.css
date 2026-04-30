@@ -1,5 +1,34 @@
 @import "tailwindcss";
 
+/* -----------------------------------------------------------
+ * Design tokens (Tailwind v4 @theme)
+ * Defining a token here auto-generates all matching utilities:
+ *   --color-accent  →  bg-accent, text-accent, border-accent,
+ *                      from-accent, to-accent, ring-accent, ...
+ *   --shadow-glow-accent  →  shadow-glow-accent
+ * --------------------------------------------------------- */
+@theme {
+  /* Surfaces */
+  --color-base: #0d1117;          /* main app background */
+  --color-surface: #161b22;       /* raised surface (chips, nested cards) */
+  --color-surface-hover: #1e242e; /* surface hover state */
+
+  /* Brand accent (orange) */
+  --color-accent: #fb923c;          /* primary brand */
+  --color-accent-strong: #f97316;   /* solid bg + gradient start */
+  --color-accent-soft: #fdba74;     /* timeline gradient fade */
+  --color-accent-light: #fbbf24;    /* gradient end */
+
+  /* Brand glow shadows */
+  --shadow-glow-accent: 0 0 15px rgba(251, 146, 60, 0.4);
+  --shadow-glow-accent-soft: 0 0 12px rgba(251, 146, 60, 0.35);
+  --shadow-glow-accent-bright: 0 0 20px rgba(255, 140, 0, 0.25);
+  --shadow-glow-accent-brightest: 0 0 30px rgba(255, 140, 0, 0.45);
+}
+
+/* -----------------------------------------------------------
+ * Float animations (used by Hero decorative shapes)
+ * --------------------------------------------------------- */
 @keyframes float {
   0%, 100% { transform: translateY(0) rotate(0deg); }
   50% { transform: translateY(-10px) rotate(4deg); }
