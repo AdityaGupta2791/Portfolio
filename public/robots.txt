@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aditya-gupta-portfolio.vercel.app/sitemap.xml
+Sitemap: https://adityagupta2791.vercel.app/sitemap.xml
